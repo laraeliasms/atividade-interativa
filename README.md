@@ -1,166 +1,151 @@
-# 🛍️ Projeto Web — Roupas & Interatividade com JS
+## 🎮 TechStore Gamer
 
-Projeto educacional com dois módulos: um **site de moda** comparando HTML semântico vs não-semântico, e uma **página interativa** demonstrando manipulação do DOM e eventos JavaScript.
-
----
-
-## 📁 Estrutura de Arquivos
-
-```
-projeto/
-├── com-semantico.html      # Site de roupas com HTML semântico
-├── sem-semantico.html      # Site de roupas sem HTML semântico
-├── pagina-interativa.html  # Página de eventos e DOM com JS
-└── README.md               # Este arquivo
-```
+Projeto desenvolvido em React com o objetivo de criar uma loja virtual gamer moderna e responsiva, voltada para a venda de periféricos, acessórios e produtos do universo gamer.
 
 ---
 
-## 🗂️ Módulo 1 — Site de Roupas (HTML Semântico)
+# 📌 Objetivo do Projeto
 
-### Sobre
-
-Dois arquivos com **visual idêntico** mas estrutura de código completamente diferente. O objetivo é demonstrar na prática o impacto do uso correto das tags HTML.
-
-### Comparativo
-
-| Elemento | `com-semantico.html` | `sem-semantico.html` |
-|---|---|---|
-| Cabeçalho | `<header>` | `<div class="topo">` |
-| Navegação | `<nav>` + `<ul>/<li>` | `<div>` com links soltos |
-| Conteúdo principal | `<main>` | `<div class="conteudo">` |
-| Seções | `<section aria-labelledby="...">` | `<div>` genérico |
-| Título da página | `<h1>` | `<div class="titulo-grande">` |
-| Subtítulos | `<h2>`, `<h3>` | `<div>`, `<span>` estilizados |
-| Cada produto | `<article>` | `<div class="caixa-produto">` |
-| Lista de produtos | `<ul>/<li>` | `<div>` na grade |
-| Rodapé | `<footer>` + `<small>` | `<div class="rodape">` |
-
-### Por que usar HTML semântico?
-
-**Acessibilidade** — Leitores de tela (usados por pessoas cegas) navegam pela página usando atalhos como "ir para `<main>`" ou "listar todos os `<h2>`". Com `<div>`, esses atalhos não existem.
-
-**SEO** — Mecanismos de busca entendem a hierarquia do conteúdo pelo HTML. Um `<h1>` tem peso diferente de um `<div>` com a mesma aparência visual.
-
-**Manutenção** — O código comunica intenção. `<article>` diz "isso é um produto independente"; `<div>` não diz nada.
-
-**Landmarks de navegação** — `<header>`, `<nav>`, `<main>` e `<footer>` criam pontos de navegação rápida para tecnologias assistivas.
+Desenvolver uma aplicação web utilizando React para simular uma loja online gamer, aplicando conceitos de componentização, responsividade, estilização moderna e organização de código.
 
 ---
 
-## 🖱️ Módulo 2 — Página Interativa com JavaScript
+# 🛠️ Tecnologias Utilizadas
 
-### Sobre
-
-Demonstração prática de manipulação do DOM e eventos JavaScript com design moderno (tema escuro, tipografia Syne + DM Mono).
-
-### Funcionalidades implementadas
-
-**Manipulação do DOM**
-- Alteração de texto via `textContent`
-- Troca de classes CSS via `classList.add()`, `classList.remove()`, `classList.toggle()`
-- Mudança de estilos de fundo e cores dinamicamente
-- Esconder e mostrar elementos com transição animada
-
-**Eventos**
-
-| Evento | Onde ocorre | O que faz |
-|---|---|---|
-| `click` | Botão principal | Muda texto e aplica destaque amarelo |
-| `dblclick` | Botão dedicado | Incrementa contador, muda mensagem |
-| `mouseover` | Botão principal | Muda mensagem ao passar o mouse |
-| `keyup` | Campo de texto | Ecoa em tempo real o que é digitado |
-| `keydown` | Campo de texto | Exibe a tecla pressionada (`key` e `code`) |
-| `click` (reset) | Botão resetar | Restaura tudo ao estado inicial |
-
-**Extras**
-- Galeria de "imagens" com 5 temas (emoji + fundo colorido com transição suave)
-- Esconder/mostrar elemento oculto com animação CSS via `max-height`
-- Log de eventos em tempo real com timestamp e cor por tipo de evento
-
-### Conceitos demonstrados
-
-```javascript
-// Seleção de elementos
-const btn = document.getElementById('meuBotao');
-
-// Adição de evento
-btn.addEventListener('click', () => {
-  elemento.textContent = 'Novo texto';
-  elemento.classList.add('highlight');
-});
-
-// Evento de teclado
-input.addEventListener('keydown', (e) => {
-  console.log(e.key);   // tecla pressionada
-  console.log(e.code);  // código físico da tecla
-});
-
-// Esconder / mostrar
-elemento.classList.toggle('escondida');
-
-// Reset de estado
-btn.addEventListener('click', () => {
-  input.value = '';
-  saida.textContent = '';
-  elemento.classList.remove('highlight');
-});
-```
+* React
+* JavaScript
+* HTML5
+* CSS3
+* Vite
+* Git e GitHub
 
 ---
 
-## 🚀 Como executar
+# 🎨 Tema Escolhido
 
-Nenhuma instalação necessária. Basta abrir os arquivos no navegador:
+A proposta da aplicação foi criar uma loja gamer chamada **TechStore**, com visual moderno, cores neon/escuras e foco em produtos tecnológicos voltados ao público gamer.
+
+---
+
+# ✅ Funcionalidades
+
+* Página inicial estilizada
+* Catálogo de produtos
+* Cards de produtos
+* Layout responsivo
+* Navegação entre seções
+* Interface moderna gamer
+* Organização em componentes React
+
+---
+
+# 📱 Responsividade
+
+O projeto foi desenvolvido utilizando técnicas de responsividade para adaptação em:
+
+* Desktop
+* Tablets
+* Smartphones
+
+Foram utilizados:
+
+* Flexbox
+* Media Queries
+* Organização responsiva de componentes
+
+---
+
+# 📂 Estrutura do Projeto
 
 ```bash
-# Opção 1 — abrir diretamente
-Clique duplo no arquivo .html
-
-# Opção 2 — servidor local com Python
-python -m http.server 3000
-# Acesse: http://localhost:3000
+TechStore/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
 ```
 
 ---
 
-## 📤 Como publicar no GitHub Pages
+# 🚀 Como Executar o Projeto
 
-1. Crie um repositório no [github.com](https://github.com)
-2. Faça upload dos arquivos em **Add file → Upload files**
-3. Vá em **Settings → Pages**
-4. Selecione a branch `main` e clique em **Save**
-5. Acesse em: `https://seu-usuario.github.io/nome-do-repositorio/`
-
-Ou pelo terminal:
+## 1. Clone o repositório
 
 ```bash
-git init
-git add .
-git commit -m "Primeiro commit — projeto web"
-git remote add origin https://github.com/SEU_USUARIO/REPOSITORIO.git
-git branch -M main
-git push -u origin main
+git clone https://github.com/seu-repositorio/techstore.git
+```
+
+## 2. Acesse a pasta
+
+```bash
+cd techstore
+```
+
+## 3. Instale as dependências
+
+```bash
+npm install
+```
+
+## 4. Execute o projeto
+
+```bash
+npm run dev
 ```
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+# 📖 Documentação Exigida
 
-- HTML5 semântico
-- CSS3 (variáveis, transições, grid, flexbox)
-- JavaScript puro (Vanilla JS) — sem frameworks
-- Google Fonts: [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond), [DM Sans](https://fonts.google.com/specimen/DM+Sans), [Syne](https://fonts.google.com/specimen/Syne), [DM Mono](https://fonts.google.com/specimen/DM+Mono)
+## ✔️ Justificativa
 
----
+O grupo escolheu utilizar o React por ser uma das bibliotecas mais utilizadas no desenvolvimento front-end atualmente, permitindo criar interfaces modernas, reutilizáveis e organizadas através de componentes.
 
-## 📚 Referências
+Além disso, o React facilita a manutenção do código, melhora a experiência do usuário e oferece maior produtividade durante o desenvolvimento da aplicação.
 
-- [MDN — HTML semântico](https://developer.mozilla.org/pt-BR/docs/Glossary/Semantics)
-- [MDN — EventTarget.addEventListener](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener)
-- [MDN — Manipulação do DOM](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model)
-- [WCAG — Diretrizes de acessibilidade](https://www.w3.org/WAI/standards-guidelines/wcag/)
+A escolha do tema gamer foi feita por possuir um visual moderno e permitir maior criatividade no design da interface.
 
 ---
 
-*Projeto criado para fins educacionais — HTML semântico, eventos JavaScript e boas práticas de frontend.*
+## ⚠️ Fricções
+
+Durante o desenvolvimento do projeto, algumas dificuldades técnicas foram encontradas:
+
+* Organização dos componentes React
+* Ajuste da responsividade em diferentes tamanhos de tela
+* Correção de erros de importação
+* Estruturação do CSS sem conflitos
+* Configuração inicial do ambiente React/Vite
+* Alinhamento e estilização dos cards de produtos
+
+Essas dificuldades foram resolvidas através de testes, pesquisas na documentação oficial e ajustes na estrutura do projeto.
+
+---
+
+# 👥 Integrantes
+
+* Camilla Valenzuela
+* Lara Geovana
+* Gabriel Rios
+
+---
+
+# 📌 Considerações Finais
+
+O projeto permitiu aplicar conceitos fundamentais de desenvolvimento front-end moderno utilizando React, além de fortalecer conhecimentos em componentização, estilização e responsividade.
+
+A TechStore representa uma aplicação prática dos conteúdos estudados em sala de aula.
+
+---
+
+# Auxílio de IA
+
+Durante o projeto, foram utilizadas algumas IAs para auxílio no desenvolvimento do projeto.
+
+IAs utilizadas: Chatgpt, Google gemini, Lovable. 
+
