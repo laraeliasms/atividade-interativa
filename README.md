@@ -1,3 +1,10 @@
+# ⚠️ AVISO SOBRE AS ENTREGAS NO REPOSITÓIO 
+
+Em 14/05 foi entregue o arquivo "atv-interativa", referente ao JavaScript e interatividade (aula 13).
+Os demais arquivos são referentes a aula 14, com entrega para o dia 21/05, contendo frameworks front-end.
+
+
+
 ## 🎮 TechStore Gamer
 
 Projeto desenvolvido em React com o objetivo de criar uma loja virtual gamer moderna e responsiva, voltada para a venda de periféricos, acessórios e produtos do universo gamer.
